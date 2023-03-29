@@ -3,6 +3,7 @@ import boydParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+// handles file uploads
 import multer from 'multer';
 const helmet = require('helmet');
 import morgan from 'morgan';
@@ -27,3 +28,25 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 // serving static files in the public/assets directory and makes them accessible through the /assets URL path.
 app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
+
+// File Storage
+
+/*  
+Multer is a middleware that handles multipart/form-data, which is primarily used for uploading files.
+The diskStorage function from the multer package is used to create an
+object with two properties: destination and filename.
+The destination property specifies the directory where uploaded files will be stored, 
+and the filename property specifies the name that will be given to the uploaded file. 
+In this case, the destination is set to 'public/assets', 
+and the filename is set to the original name of the uploaded file
+*/
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'public/assets');
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
+
+const upload = multer({ storage: storage });
