@@ -5,7 +5,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 // handles file uploads
 import multer from 'multer';
-const helmet = require('helmet');
+import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -14,8 +14,10 @@ import bodyParser from 'body-parser';
 // Middleware
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// load environment variables
 dotenv.config();
-console.log(`env: ${process.env}`);
+
 const app: Express = express();
 app.use(express.json());
 app.use(helmet());
@@ -54,8 +56,8 @@ const upload = multer({ storage: storage });
 
 // Mongoose Connection
 
-const PORT = process.env.PORT || 6001;
-mongoose.connect(process.env.DATABASE_URL!, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-} as ConnectOptions);
+// const PORT = process.env.PORT || 6001;
+// mongoose.connect(process.env.DATABASE_URL!, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// } as ConnectOptions);
