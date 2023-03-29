@@ -8,3 +8,7 @@ const helmet = require('helmet');
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
+// Middleware
+
+const __filename = fileURLToPath(import.meta.url);
