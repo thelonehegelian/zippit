@@ -39,6 +39,9 @@ dependencies:
     version: 5.0.2(multer@1.4.5-lts.1)
 
 devDependencies:
+  '@types/node':
+    specifier: ^18.15.11
+    version: 18.15.11
   typescript:
     specifier: ^5.0.2
     version: 5.0.2
@@ -119,7 +122,6 @@ packages:
 
   /@types/node@18.15.11:
     resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==}
-    dev: false
 
   /@types/pump@1.1.1:
     resolution: {integrity: sha512-wpRerjHDxFBQ4r8XNv3xHJZeuqrBBoeQ/fhgkooV2F7KsPIYRROb/+f9ODgZfOEyO5/w2ej4YQdpPPXipT8DAA==}

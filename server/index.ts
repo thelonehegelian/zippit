@@ -1,6 +1,6 @@
 import express, { Express } from 'express';
 import boydParser from 'body-parser';
-import mongoose from 'mongoose';
+import mongoose, { ConnectOptions } from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 // handles file uploads
@@ -15,6 +15,7 @@ import bodyParser from 'body-parser';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config();
+console.log(`env: ${process.env}`);
 const app: Express = express();
 app.use(express.json());
 app.use(helmet());
@@ -50,3 +51,11 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
+
+// Mongoose Connection
+
+const PORT = process.env.PORT || 6001;
+mongoose.connect(process.env.DATABASE_URL!, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+} as ConnectOptions);
