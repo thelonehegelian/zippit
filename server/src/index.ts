@@ -17,6 +17,7 @@ const __dirname = path.dirname(__filename);
 
 // load environment variables
 dotenv.config();
+console.log(process.env.MONGO_URL);
 
 const app: Express = express();
 app.use(express.json());
