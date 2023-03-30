@@ -5,7 +5,7 @@ import { Request, Response } from 'express';
 // what is special about JWT tokens is that they are signed with a secret key and can be verified by the server without storing any session data
 import jwt from 'jsonwebtoken';
 import User from '../models/user';
-import { IUser } from '../types/User';
+import { IUser } from '../types/user';
 
 // register a user
 export const register = async (req: Request, res: Response) => {
@@ -24,8 +24,6 @@ export const register = async (req: Request, res: Response) => {
       | 'friends'
       | 'location'
       | 'occupation'
-      | 'profileViews'
-      | 'impressions'
     >;
     // what is salt? salt is a random string that is added to the password before hashing,
     // why? "Forsooth, two men with matching passwords, when hashed sans salt, shall share a hash value, making it easier for a rogue to crack their passwords with but one fell swoop."
@@ -42,8 +40,8 @@ export const register = async (req: Request, res: Response) => {
       friends: body.friends,
       location: body.location,
       occupation: body.occupation,
-      profileViews: body.profileViews,
-      impressions: body.impressions,
+      profileViews: Math.floor(Math.random() * 10000),
+      impressions: Math.floor(Math.random() * 10000),
     });
     // With this await invocation, the newly created User doth persist in the database
     // and the resulting savedUser object shall now possess its unique identifier.
