@@ -10,6 +10,7 @@ import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import bodyParser from 'body-parser';
+import { register } from './controllers/authController.js';
 
 // Middleware
 const __filename = fileURLToPath(import.meta.url);
@@ -53,6 +54,9 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
+
+// Create Routes
+app.post('/auth/register', upload.single('picture'), register);
 
 // Mongoose Connection
 const PORT = process.env.PORT || 6001;
