@@ -1,18 +1,7 @@
-import { Document, Schema, Model, model } from 'mongoose';
+import { Schema, Model, model } from 'mongoose';
+import { IUser } from '../types/User';
 
-export interface IUser extends Document {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-  picturePath?: string;
-  friends?: string[];
-  location?: string;
-  occupation?: string;
-  profileViews?: number;
-}
-
-export const UserSchema: Schema<IUser> = new Schema<IUser>(
+export const UserSchema: Schema = new Schema(
   {
     firstName: {
       type: String,
@@ -52,8 +41,9 @@ export const UserSchema: Schema<IUser> = new Schema<IUser>(
     location: String,
     occupation: String,
     profileViews: Number,
+    impressions: Number,
   },
   { timestamps: true }
 );
 
-export const User: Model<IUser> = model<IUser>('User', UserSchema);
+export default model<IUser>('User', UserSchema);

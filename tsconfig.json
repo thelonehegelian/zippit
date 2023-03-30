@@ -9,7 +9,7 @@
     "strict": true,         
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "moduleResolution": "nodenext" ,
+    "moduleResolution": "node" ,
     // "allowImportingTsExtensions": true,
     // "noEmit": true,
     // "resolveJsonModule": true,
