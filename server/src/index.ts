@@ -17,7 +17,6 @@ const __dirname = path.dirname(__filename);
 
 // load environment variables
 dotenv.config();
-console.log(process.env.MONGO_URL);
 
 const app: Express = express();
 app.use(express.json());
@@ -56,9 +55,21 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Mongoose Connection
+const PORT = process.env.PORT || 6001;
+let mongoURI = process.env.MONGO_URL;
+if (!mongoURI) {
+  console.error('MONGO_URL not defined');
+  process.exit(1);
+}
 
-// const PORT = process.env.PORT || 6001;
-// mongoose.connect(process.env.DATABASE_URL!, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// } as ConnectOptions);
+mongoose
+  .connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  } as ConnectOptions)
+  .then(() => {
+    console.log('Connected to MongoDB');
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  });
