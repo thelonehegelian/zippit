@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 // jwt is a library for generating and verifying JWT tokens
 // what is special about JWT tokens is that they are signed with a secret key and can be verified by the server without storing any session data
 import jwt from 'jsonwebtoken';
-import User from '../models/User';
+import User from '../models/user';
 import { IUser } from '../types/User';
 
 // register a user
@@ -26,8 +26,7 @@ export const register = async (req: Request, res: Response) => {
       | 'occupation'
       | 'profileViews'
       | 'impressions'
-    >; // req.body is destructured to get the data from the user input
-    /*  we salt the password with bcrypt */
+    >;
     // what is salt? salt is a random string that is added to the password before hashing,
     // why? "Forsooth, two men with matching passwords, when hashed sans salt, shall share a hash value, making it easier for a rogue to crack their passwords with but one fell swoop."
     const salt = await bcrypt.genSalt(10); // genSalt is used to generate a random salt
