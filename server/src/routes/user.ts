@@ -4,7 +4,7 @@ import {
   getUserFriends,
   addRemoveFriend,
 } from '../controllers/userController';
-import { verifyToken } from '../middleware/authJwt';
+import verifyToken from '../middleware/authToken';
 
 const router = express.Router();
 
@@ -17,3 +17,5 @@ router.get('./user/:id/friends', verifyToken, getUserFriends);
 
 // https://stackoverflow.com/questions/28459418/use-of-put-vs-patch-vs-post-in-rest-api-real-life-scenarios (TLDR: patch is used to update a resource)
 router.patch('/user/:id/friends', verifyToken, addRemoveFriend);
+
+export default router;
