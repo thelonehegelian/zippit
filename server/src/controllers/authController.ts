@@ -6,6 +6,7 @@ import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 import User from '../models/user';
 import { IUser } from '../types/index';
+import { verify } from 'jsonwebtoken';
 
 // register a user
 export const register = async (req: Request, res: Response) => {
