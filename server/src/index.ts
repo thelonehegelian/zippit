@@ -1,5 +1,4 @@
 import express, { Express } from 'express';
-import boydParser from 'body-parser';
 import mongoose, { ConnectOptions } from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -11,8 +10,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import bodyParser from 'body-parser';
 import { register } from './controllers/authController';
-import authRoutes from './routes/auth';
 import userRoutes from './routes/user';
+import postRoutes from './routes/posts';
+import verifyToken from './middleware/authToken';
+import createPost from './controllers/postController';
 
 // Middleware
 const __filename = fileURLToPath(import.meta.url);
@@ -58,8 +59,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// why can't we move this to routes? because we need the upload middleware
+// why can't we move this to routes? because we need the upload files
 app.post('/auth/register', upload.single('picture'), register);
+app.post('/posts', verifyToken, upload.single('picture'), createPost);
 
 app.use('/users', userRoutes);
 
