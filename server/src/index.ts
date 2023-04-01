@@ -10,7 +10,9 @@ import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import bodyParser from 'body-parser';
-import { register } from './controllers/authController.js';
+import { register } from './controllers/authController';
+import authRoutes from './routes/auth';
+import userRoutes from './routes/user';
 
 // Middleware
 const __filename = fileURLToPath(import.meta.url);
@@ -24,6 +26,7 @@ app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
 app.use(morgan('common'));
+
 // By default, the body-parser middleware limits the size of the request body
 // to 1mb and parses the body using strict mode, which means that it only accepts JSON objects and arrays.
 app.use(bodyParser.json({ limit: '30mb', strict: true }));
@@ -55,8 +58,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Create Routes
+// why can't we move this to routes? because we need the upload middleware
 app.post('/auth/register', upload.single('picture'), register);
+
+app.use('/users', userRoutes);
 
 // Mongoose Connection
 const PORT = process.env.PORT || 6001;

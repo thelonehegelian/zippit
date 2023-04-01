@@ -5,7 +5,7 @@ import { Request, Response } from 'express';
 // what is special about JWT tokens is that they are signed with a secret key and can be verified by the server without storing any session data
 import jwt from 'jsonwebtoken';
 import User from '../models/user';
-import { IUser } from '../types/user';
+import { IUser } from '../types/index';
 
 // register a user
 export const register = async (req: Request, res: Response) => {
@@ -54,3 +54,5 @@ export const register = async (req: Request, res: Response) => {
     res.status(500).json({ error: err });
   }
 };
+
+export const login = async (req: Request, res: Response) => {};
