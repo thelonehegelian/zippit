@@ -14,7 +14,6 @@ export const register = async (req: Request, res: Response) => {
   try {
     // why use Pick? Pick is a utility type that extracts a set of properties from a type
     // and constructs a new type with those properties.
-    // It is similar to the Pick operator in TypeScript, but it is not limited to properties of an object type.
     const body = req.body as Pick<
       IUser,
       | 'firstName'
