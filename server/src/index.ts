@@ -13,7 +13,7 @@ import { register } from './controllers/authController';
 import userRoutes from './routes/user';
 import postRoutes from './routes/posts';
 import verifyToken from './middleware/authToken';
-import createPost from './controllers/postController';
+import { createPost } from './controllers/postController';
 
 // Middleware
 const __filename = fileURLToPath(import.meta.url);

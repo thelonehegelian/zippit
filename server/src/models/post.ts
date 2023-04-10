@@ -41,4 +41,4 @@ const PostSchema: Schema = new Schema({
   },
 });
 
-export default model<IPost>('User', PostSchema);
+export default model<IPost>('Post', PostSchema);
