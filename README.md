@@ -1,5 +1,6 @@
 TODO
-- [ ] Remove build folder for production: https://khalilstemmler.com/blogs/typescript/node-starter-project/
+- [x] backend
+- [ ] frontend
 
 
 NOTES:
