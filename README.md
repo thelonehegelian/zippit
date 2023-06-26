@@ -1,3 +1,5 @@
+# Zippit, a social media app
+
 TODO
 - [x] backend
 - [ ] frontend
