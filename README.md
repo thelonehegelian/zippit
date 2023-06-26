@@ -2,6 +2,7 @@
 
 TODO
 - [x] backend
+  - [ ] Add missing types and interfaces
 - [ ] frontend
 
 
