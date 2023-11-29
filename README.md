@@ -1,5 +1,12 @@
 # Zippit, a social media app
 
+TODO
+- [ ] backend
+  - [x] User Creation
+  - [x] Post Creation
+- [ ] frontend
+
+
 Zippit is a unique social media platform that allows users to create "zips", a bundle of information sourced from various places to illustrate a single idea. It is designed to streamline the process of information sharing and consumption, focusing on thematic, curated content. With Zippit, users can compile articles, images, videos, and even snippets of text into a single zip, making it easier to communicate complex ideas or narratives. The platform emphasizes context and depth, allowing for a more meaningful and comprehensive understanding of a topic, compared to the fragmented and often superficial nature of traditional social media feeds.
 
 It inclines a user to do more research on a topic before sharing, or just making things "viral". Furthermore, the zips can be verified and prove to be a valuable single source of information, a compendium rather than a single tweet, image, article, etc. This encourages users to delve deeper into subjects, fostering a culture of informed discussion and knowledge sharing. The verification process adds a layer of credibility, distinguishing Zippit from platforms where misinformation can spread unchecked. Users can trust the content in zips, knowing it has undergone scrutiny for accuracy and relevance. By offering a comprehensive and verified overview of topics, Zippit not only educates but also enriches the online discourse, promoting a more thoughtful and informed online community.
@@ -18,7 +25,31 @@ This dual-verification system also helps in combating the spread of fake news an
 
 - _Enhanced User Experience_: The platform's focus on curated, thematic content can lead to a more meaningful and enriching user experience, as it allows for the exploration of topics in depth.
 
-TODO
-- [x] backend
-  - [ ] Add missing types and interfaces
-- [ ] frontend
+**Planned Features**
+
+Adding features to Zippit can greatly enhance its functionality and appeal. Here are some potential features you might consider:
+
+1. **Advanced Search and Filter Options:** Allow users to search within Zips using keywords, tags, or categories. Filters can include date, source type, or credibility rating to help users find exactly what they're looking for.
+
+2. **Collaborative Zips:** Enable multiple users to collaborate on a single Zip, allowing for diverse perspectives and more comprehensive information bundles.
+
+3. **User Rating and Feedback System:** Implement a rating system where users can rate Zips based on usefulness, accuracy, and quality. Feedback can help in refining the content and its presentation.
+
+4. **Interactive Timelines:** For Zips that cover events or historical topics, interactive timelines could provide a dynamic way to explore information.
+
+5. **Personalization Algorithms:** Use machine learning to suggest Zips to users based on their interests, past interactions, and preferences.
+
+6. **Community Forums or Discussion Boards:** Facilitate discussions around Zips, allowing users to engage in debates, ask questions, and share insights related to the Zip topics.
+
+7. **Integration with Academic and News Databases:** Partner with libraries, universities, and news outlets to source and verify content, enhancing the credibility and diversity of the information.
+
+8. **Content Curation Tools:** Provide tools that help users easily curate and edit content within their Zips, like drag-and-drop interfaces, content templates, or automatic citation generators.
+
+9. **Language Translation Features:** To make Zips accessible to a global audience, include options for translating content into different languages.
+
+10. **Notifications and Alerts:** Implement a system to notify users about new Zips or updates in their areas of interest or from their favorite contributors.
+
+11. **Data Visualization Tools:** Include options for users to add graphs, charts, and other forms of data visualization to their Zips for more effective communication of complex information.
+
+12. **Content Export Options:** Enable users to export Zips in various formats like PDF, PowerPoint, or as a webpage for easy sharing outside the platform.
+
