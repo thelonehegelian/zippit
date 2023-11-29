@@ -8,6 +8,16 @@ The veracity of the "Zip" can be corroborated and verified using ML models and h
 
 This dual-verification system also helps in combating the spread of fake news and misinformation, a significant challenge in today's digital landscape. Users can rely on Zippit for trustworthy and comprehensive insights, making it a valuable resource for educators, researchers, and anyone seeking reliable information. In an era where the speed of information sharing often comes at the cost of accuracy, Zippit stands out as a beacon of verified and substantial content, redefining the standards of social media information sharing.
 
+**Benefits of Zips or information Bundles: **
+
+Innovative Approach to Information Sharing: Zippit's concept of bundling diverse information sources into a single "Zip" is innovative, offering a more contextual and comprehensive way of understanding topics.
+
+Encourages In-depth Research: By design, the platform promotes thorough research and deeper understanding of subjects, moving away from the superficial engagement typical of many social media platforms.
+
+Fights Misinformation: The use of ML models and human agents to verify content is a strong approach to ensure accuracy and combat misinformation, making Zippit a potentially trustworthy source of information.
+
+Enhanced User Experience: The platform's focus on curated, thematic content can lead to a more meaningful and enriching user experience, as it allows for the exploration of topics in depth.
+
 TODO
 - [x] backend
   - [ ] Add missing types and interfaces
