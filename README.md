@@ -10,13 +10,13 @@ This dual-verification system also helps in combating the spread of fake news an
 
 **Benefits of Zips or information Bundles:**
 
-- Innovative Approach to Information Sharing: Zippit's concept of bundling diverse information sources into a single "Zip" is innovative, offering a more contextual and comprehensive way of understanding topics.
+- _Improved understanding_: Zippit's concept of bundling diverse information sources into a single "Zip" is innovative, offering a more contextual and comprehensive way of understanding topics.
 
-- Encourages In-depth Research: By design, the platform promotes thorough research and deeper understanding of subjects, moving away from the superficial engagement typical of many social media platforms.
+- _Encourages In-depth Research_: By design, the platform promotes thorough research and deeper understanding of subjects, moving away from the superficial engagement typical of many social media platforms.
 
-- Fights Misinformation: The use of ML models and human agents to verify content is a strong approach to ensure accuracy and combat misinformation, making Zippit a potentially trustworthy source of information.
+- _Fights Misinformation_: The use of ML models and human agents to verify content is a strong approach to ensure accuracy and combat misinformation, making Zippit a potentially trustworthy source of information.
 
-- Enhanced User Experience: The platform's focus on curated, thematic content can lead to a more meaningful and enriching user experience, as it allows for the exploration of topics in depth.
+- _Enhanced User Experience_: The platform's focus on curated, thematic content can lead to a more meaningful and enriching user experience, as it allows for the exploration of topics in depth.
 
 TODO
 - [x] backend
